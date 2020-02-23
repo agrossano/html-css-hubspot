@@ -59,8 +59,8 @@ li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
-
 
 .btn-arancio {
 text-align: center;
@@ -68,9 +68,15 @@ border-radius: 3px;
 display: inline-block;
 background-color: #ff7a59;
 color: #fff;
-padding: 13px 20px;
+padding: 13px 16px;
 font-size: 14px;
 font-weight: 500;
+transition: 0.3s ease-in-out;
+}
+
+.btn-arancio:hover {
+  background-color:#ffbcac;
+  color:#fff;
 }
 
 /* PARTE DI TESTATA **************/
@@ -83,6 +89,7 @@ font-weight: 500;
   top: 0;
   border-bottom: 1px solid #cbd6e2;
   padding-top: 24px;
+  z-index: 99999;
 }
 
 .fixedeng {
@@ -125,8 +132,13 @@ font-weight: 500;
 }
 
 .fixedbtn {
+  transition: 0.3s ease-in-out;
   float:right;
+
 }
+
+
+
 
 .fixedbtn img {
   width: 18px;
@@ -134,7 +146,7 @@ font-weight: 500;
   vertical-align: middle;
 }
 
-.fixedbtn a:first-of-type {
+.login {
   margin: 16px;
   text-align: center;
   border-radius: 3px;
@@ -146,12 +158,26 @@ font-weight: 500;
   font-weight: 500;
 }
 
+.login:hover {
+  background-color: #fff1ee;
+  color: #ff7a59;
+}
+
 /* header nav *********/
 
 .nav {
   background-color: #fff;
   margin-top: 94px;
   padding: 8px 0;
+}
+
+.menu li {
+  color: #33475b;
+  font-size: 18px;
+  line-height: 29px;
+  font-weight: 600;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .menu li:not(.noarrow):after {
@@ -176,13 +202,87 @@ nav li {
   padding: 18px 0;
 }
 
-.menu li {
-  color: #33475b;
-  font-size: 18px;
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown1 {
+  display: inline-block;
+}
+
+.dropdown1 {
+  display: none;
+  float: left;
+  right: -504px;
+  top: 45px;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #cbd6e2;
+  min-width: 895px;
+  padding: 0 27px;
+  box-shadow: 0 1px 24px rgba(45,62,80,0.12);
+  z-index: 1;
+  text-align: center;
+}
+
+.dropdown1 h3 {
+  font-size: 20px;
   line-height: 29px;
+  color: #33475b;
   font-weight: 600;
-  padding-left: 18px;
-  padding-right: 18px;
+}
+
+.dropdown1 p {
+  font-size: 15px;
+  line-height: 24px;
+  color: #33475b;
+  font-weight: 400;
+}
+
+.dropdown1 li {
+  padding: 36px;
+}
+
+.freehubspot {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #cbd6e2;
+}
+
+.marketing-hub {
+  width: 100%
+}
+
+.dropdown2 {
+  border-bottom: 1px solid #cbd6e2;
+}
+
+.tre {
+  padding: 18px;
+  float: left;
+  width: 32%;
+  text-align: left;
+}
+
+.uno-menu > * {
+  display: inline-block;
+  position: relative;
+  right: 30px;
+}
+
+#btn-new {
+background-color:#00bda5;
+color: #fff;
+font-size: 11px;
+font-weight: 700;
+padding: 3px 14px;
+border-radius: 3px;
+text-align: center;
+text-transform: uppercase;
+margin-right: 5px;
+vertical-align: top;
+
 }
 
 /* SEZIONI */
@@ -236,6 +336,7 @@ nav li {
   font-weight: 600;
   padding: 24px 32px;
 }
+
 /* sezione 2 */
 .rubik {
   background-color: #f5f8fa;
@@ -274,6 +375,13 @@ nav li {
 .boxfree {
   background-color: #FFF;
   padding: 36px;
+  box-shadow: 0 0 11px #eaf0f6;
+  transition: 0.3s ease-in-out;
+}
+
+.boxfree:hover {
+  box-shadow: 0 10px 50px -5px rgba(51,71,91,0.12);
+  transform: scale(1.014)
 }
 
 .librogenda {
@@ -379,6 +487,10 @@ nav li {
   border-top: 1px solid #e0e6ed;
 }
 
+.col:nth-child(2) {
+  margin:0px 37px;
+}
+
 .col > img {
   width: 100%;
   height: 150px;
@@ -389,10 +501,13 @@ nav li {
   float:left;
   padding: 36px;
   background-color: white;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 11px #eaf0f6;
 }
 
-.col:nth-child(2) {
-  margin:0px 37px;
+.col:hover {
+  transform: scale(1.014);
+  box-shadow: 0 10px 50px -5px rgba(51,71,91,0.12);
 }
 
 
@@ -553,10 +668,9 @@ nav li {
   height: auto;
 }
 
+
 /* FOOTER */
 
-
-/* FONDO PAGINA */
 
 footer {
   padding: 111px 0 0;
@@ -601,6 +715,12 @@ footer {
   line-height: 29px;
 }
 
+.icone-social *{
+  color: #cbd6e2;
+  padding-top:30px;
+  padding-right: 30px;
+}
+
 .languages {
   text-align: center;
   padding: 36px 0;
@@ -618,7 +738,6 @@ footer {
 .footer-bottom {
   padding: 36px 0;
 }
-
 
 .logo-footer {
   float: left;
