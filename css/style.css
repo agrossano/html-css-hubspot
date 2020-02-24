@@ -437,13 +437,28 @@ vertical-align: top;
   margin: 14px 0;
 }
 
+
+
 .freehub-text p:nth-child(3)  {
+  position: relative;
   text-align: left;
   font-size:13px;
   font-weight: 600;
   line-height: 21px;
   color: #33475b;
   margin: 26px 0 15px 0;
+}
+
+.freehub-text p:nth-child(3):after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  height: 5px;
+  margin-left: 10px;
+  border-bottom: 1px solid
+  #e0e6ed;
+  top: 4px;
+  width: 77%;
 }
 
 .orangecheck {
