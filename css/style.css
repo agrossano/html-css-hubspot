@@ -113,7 +113,27 @@ transition: 0.3s ease-in-out;
   margin-top: 2px;
 }
 
-.fixedeng span:after {
+.freehubspot span {
+  display: block;
+}
+
+.droplang .dropdown1 {
+  min-width: 0;
+  left: -48px;
+  right: -30px;
+  top: 30px;
+  padding: 0;
+}
+
+.droplang span {
+  font-size: 16px;
+  line-height: 29px;
+  color: #33475b;
+  text-align: left;
+  font-weight: 600;
+}
+
+.fixedeng .droplang:after {
   content:'⮟';
   display: inline-block;
   color: #7c98b6;
@@ -134,11 +154,7 @@ transition: 0.3s ease-in-out;
 .fixedbtn {
   transition: 0.3s ease-in-out;
   float:right;
-
 }
-
-
-
 
 .fixedbtn img {
   width: 18px;
@@ -220,20 +236,20 @@ nav li {
   background-color: #fff;
   border: 1px solid #cbd6e2;
   min-width: 895px;
-  padding: 0 27px;
+  padding: 0 26px;
   box-shadow: 0 1px 24px rgba(45,62,80,0.12);
   z-index: 1;
   text-align: center;
 }
 
-.dropdown1 h3 {
+.noarrow h3 {
   font-size: 20px;
   line-height: 29px;
   color: #33475b;
   font-weight: 600;
 }
 
-.dropdown1 p {
+.noarrow p {
   font-size: 15px;
   line-height: 24px;
   color: #33475b;
@@ -241,7 +257,7 @@ nav li {
 }
 
 .dropdown1 li {
-  padding: 36px;
+  padding: 36px 27px;
 }
 
 .freehubspot {
@@ -251,17 +267,24 @@ nav li {
 }
 
 .marketing-hub {
-  width: 100%
+  width: 100%;
+	border-bottom: 1px solid #cbd6e2;
 }
+
 
 .dropdown2 {
   border-bottom: 1px solid #cbd6e2;
 }
 
 .tre {
-  padding: 18px;
   float: left;
   width: 32%;
+  text-align: left;
+}
+
+.due {
+  float: left;
+  width: 50%;
   text-align: left;
 }
 
@@ -284,6 +307,7 @@ margin-right: 5px;
 vertical-align: top;
 
 }
+
 
 /* SEZIONI */
 
@@ -336,6 +360,7 @@ vertical-align: top;
   font-weight: 600;
   padding: 24px 32px;
 }
+
 
 /* sezione 2 */
 .rubik {
